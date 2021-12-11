@@ -8,11 +8,13 @@ Game setup: Each game round consists two turns, the first by the com- puter and 
 - The computer asks for the human’s input.
 - The human chooses one of Rock, Paper, and Scissors, or Quit.
 - Unless the human quits, the computer figures out the result of the game, as follows:
+
 – Rock smashes Scissors, so Rock beats Scissors.
 – Scissors can cut up paper, so Scissors beat Paper. 
 – Paper covers Rock, so Paper beats Rock.
+
 If both players chose the same, it is a draw. The computer reports the result of this round.
-• If the human chooses to quit, the computer reports: 
+- If the human chooses to quit, the computer reports: 
 – the number of games played, and
 – the number of times the human won.
 Computer’s brains. The computer must be able to exploit some human biases. If the human has played Rock most often, the computer should assume that he or she will play Rock in the next round, so the computer should play Paper. If the human has played Rock and Paper equally often, and Scissors less often, the computer should assume that the human is going to play either Rock or Paper (both equally likely) in the next round. (What should the computer play?)
