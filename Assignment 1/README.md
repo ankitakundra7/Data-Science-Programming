@@ -8,11 +8,11 @@ This is a popular game and you must create a computer player.
 - The human chooses one of Rock, Paper, and Scissors, or Quit.
 - Unless the human quits, the computer figures out the result of the game, as follows:
 
-– Rock smashes Scissors, so Rock beats Scissors.
+  – Rock smashes Scissors, so Rock beats Scissors.
 
-– Scissors can cut up paper, so Scissors beat Paper. 
+  – Scissors can cut up paper, so Scissors beat Paper. 
 
-– Paper covers Rock, so Paper beats Rock.
+  – Paper covers Rock, so Paper beats Rock.
 
 If both players chose the same, it is a draw. The computer reports the result of this round.
 - If the human chooses to quit, the computer reports: 
