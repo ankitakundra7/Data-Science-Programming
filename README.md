@@ -7,8 +7,7 @@ Game setup: Each game round consists two turns, the first by the com- puter and 
 - The computer chooses one of Rock, Paper, and Scissors, but keeps its choice secret.
 - The computer asks for the human’s input.
 - The human chooses one of Rock, Paper, and Scissors, or Quit.
-• Unless the human quits, the computer figures out the result of the
-game, as follows:
+• Unless the human quits, the computer figures out the result of the game, as follows:
 – Rock smashes Scissors, so Rock beats Scissors.
 – Scissors can cut up paper, so Scissors beat Paper. 
 – Paper covers Rock, so Paper beats Rock.
