@@ -4,9 +4,9 @@
 This is a popular game and you must create a computer player.
 
 Game setup: Each game round consists two turns, the first by the com- puter and the second by a human. The computer continues playing rounds until the human chooses to quit.
-• The computer chooses one of Rock, Paper, and Scissors, but keeps its choice secret.
-• The computer asks for the human’s input.
-• The human chooses one of Rock, Paper, and Scissors, or Quit.
+- The computer chooses one of Rock, Paper, and Scissors, but keeps its choice secret.
+- The computer asks for the human’s input.
+- The human chooses one of Rock, Paper, and Scissors, or Quit.
 • Unless the human quits, the computer figures out the result of the
 game, as follows:
 – Rock smashes Scissors, so Rock beats Scissors.
@@ -21,7 +21,7 @@ Gotchas.
 • User input: How you want to receive the user’s input is up to you, but you must check the user’s input to make sure it is valid (you can assume that the user input is of the correct type). If it isn’t, request the user for input again.
 
 
-## 2 Voters in Florida (20 points)
+## 2. Voters in Florida (20 points)
 
 The file FloridaVoters.html contains a Web Table of republican and demo- cratic voters in various counties in Florida. Write code that reads in this file as a standard text file and prints out the counties, along with the number of republican and democratic voters in those counties, sorted by the number of democratic voters. The output should look like this:
 LAFAYETTE 1373 2672
@@ -37,7 +37,7 @@ Please note: There are many libraries for automatically reading and pars- ing HT
 Hint: You may want to read in the file and create a list of tuples of the form [(’ALACHUA’, 47329, 77996), (’BAKER’, 6963, 5813), ...] and then do the sorting and printing.
 
 
-## 3 Near-duplicate detection (20 points)
+## 3. Near-duplicate detection (20 points)
 
 Tweets on a subject are often nearly (but not exactly) duplicates of each other. The file Santa.txt contains a few tweets about Santa Claus, one tweet per line. We will try to detect tweets that we have already seen before.
 (a) Convert each tweet into a dictionary of phrases (6 points).
@@ -54,7 +54,7 @@ Hint: You can use the function math.sqrt(x) to calculate the square-root of any 
 You should call the functions moving window and cosine here. 
 
 
-## 4 The Google of Quotes (40 points)
+## 4. The Google of Quotes (40 points)
 The file “quotes.txt” contains pairs of lines, with the first line being a quote and the following line being the person who said it. We want to build a search engine that, given a word or words, finds the best matching quotes.
 (a) Build a list of full quotes (5 points). Read in the file, and create a list of full quotes of the form “quote - speaker”. For example, “The heart has its reasons, of which the mind knows nothing. - Blaise Pascal”.
 (b) Words from full quotes (5 points). Write a function that takes a full quote as argument and outputs a list of the words in the it. The words should all be lower-case, and should contain only characters, digits, or underscore.
