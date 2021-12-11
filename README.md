@@ -56,15 +56,18 @@ You should call the functions moving window and cosine here.
 
 ## 4. The Google of Quotes (40 points)
 The file “quotes.txt” contains pairs of lines, with the first line being a quote and the following line being the person who said it. We want to build a search engine that, given a word or words, finds the best matching quotes.
+
 (a) Build a list of full quotes (5 points). Read in the file, and create a list of full quotes of the form “quote - speaker”. For example, “The heart has its reasons, of which the mind knows nothing. - Blaise Pascal”.
+
 (b) Words from full quotes (5 points). Write a function that takes a full quote as argument and outputs a list of the words in the it. The words should all be lower-case, and should contain only characters, digits, or underscore.
 Hint: Use the lower() function of strings, and re.split() to split into words, but you must figure out the regular expression for re.split().
-(c) Build the postings-list dictionary (6 points). A postings-list is
-a dictionary whose keys are full quotes, and whose values are themselves dictionaries with key being a word, and value being the number of times the word occurs in the full quote. So, for the key “The heart has its rea- sons, of which the mind knows nothing. - Blaise Pascal”, the value will itself be the following dictionary: {’the’:2, ’heart’:1, ’has’:1, ’its’:1, ’reasons’:1, ’of’:1, ’which’:1, ’mind’:1, ’knows’:1, ’nothing’:1, ’blaise’:1, ’pascal’:1}.
-(d) Build the reverse postings-list dictionary (6 points). A reverse postings-list is a dictionary whose keys are the words, and the values are themselves dictionaries with the key being a full quote, and the value being the number of times the word appeared in the full quote.
-So, for the key “entertainer”, the value is the dictionary {’An actor is
-at most a poet and at least an entertainer. - Marlon Brando’: 1} (only this quote contains the word “entertainer”).
+
+(c) Build the postings-list dictionary (6 points). A postings-list is a dictionary whose keys are full quotes, and whose values are themselves dictionaries with key being a word, and value being the number of times the word occurs in the full quote. So, for the key “The heart has its rea- sons, of which the mind knows nothing. - Blaise Pascal”, the value will itself be the following dictionary: {’the’:2, ’heart’:1, ’has’:1, ’its’:1, ’reasons’:1, ’of’:1, ’which’:1, ’mind’:1, ’knows’:1, ’nothing’:1, ’blaise’:1, ’pascal’:1}.
+
+(d) Build the reverse postings-list dictionary (6 points). A reverse postings-list is a dictionary whose keys are the words, and the values are themselves dictionaries with the key being a full quote, and the value being the number of times the word appeared in the full quote. So, for the key “entertainer”, the value is the dictionary {’An actor is at most a poet and at least an entertainer. - Marlon Brando’: 1} (only this quote contains the word “entertainer”).
+
 (e) Write a TF-IDF function (8 points). To measure how much a full quote is about a particular word, one typically uses the TF-IDF measure.
+
 • TF stands for “term frequency”; the term frequency of a word w in a full quote q is the number of times w occurs in q, divided by the maximum number of times any word occurs in q.
 • IDF stands for “inverse document frequency”: the IDF of a word w is the logarithm of the ratio of the total number N of full quotes to the number of full quotes in that contain the word w.
 • TF-IDF of a word w for a full quote q is just the product of the TF and IDF.
@@ -73,10 +76,10 @@ So, for the word “entertainer” in the Marlon Brando quote of part (d):
 quote is “at”, which occurs twice, so the TF ratio is 0.5)
 • The IDF is log(886/1), since there are 886 documents and the word
 “entertainer ” occurs in only one full quote.
-Write a function to compute the TF-IDF of any word in any full quote,
-using the postings and reverse-postings.
-Hint: Do import math and use math.log() to get logarithms.
+Write a function to compute the TF-IDF of any word in any full quote, using the postings and reverse-postings. Hint: Do import math and use math.log() to get logarithms.
+
 (f) Quote search using a single word (5 points). Write a function that takes a word as argument, and returns a dictionary whose keys are full quotes containing that word, and whose values are the TF-IDF score of that word for that full quote.
+
 (g) Quote search using multiple words (5 points). Write a function that takes a list of words as argument, and returns a dictionary whose keys are full quotes containing one or more of the words in that list, and whose values are the sum of TF-IDF scores of the words in that list for that full quote.
 
 For example, if you called the function with the list of words [heart, mind, disease], and you have a full quote “The heart has its reasons, of which the mind knows nothing - Blaise Pascal”, then you want to compute the sum of TF-IDF scores of heart and mind for this full quote.
