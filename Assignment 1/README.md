@@ -10,9 +10,7 @@ This is a popular game and you must create a computer player.
    - Rock smashes Scissors, so Rock beats Scissors.
    - Scissors can cut up paper, so Scissors beat Paper. 
    - Paper covers Rock, so Paper beats Rock.
-
 If both players chose the same, it is a draw. The computer reports the result of this round.
-
 - If the human chooses to quit, the computer reports: 
    - the number of games played, and
    - the number of times the human won.
