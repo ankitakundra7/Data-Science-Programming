@@ -76,13 +76,14 @@ Hint: Use the lower() function of strings, and re.split() to split into words, b
 (e) Write a TF-IDF function (8 points). To measure how much a full quote is about a particular word, one typically uses the TF-IDF measure.
 
 • TF stands for “term frequency”; the term frequency of a word w in a full quote q is the number of times w occurs in q, divided by the maximum number of times any word occurs in q.
+
 • IDF stands for “inverse document frequency”: the IDF of a word w is the logarithm of the ratio of the total number N of full quotes to the number of full quotes in that contain the word w.
-• TF-IDF of a word w for a full quote q is just the product of the TF and IDF.
-So, for the word “entertainer” in the Marlon Brando quote of part (d):
-• The TF is 0.5 (it occurs once, while the most frequent word in that
-quote is “at”, which occurs twice, so the TF ratio is 0.5)
-• The IDF is log(886/1), since there are 886 documents and the word
-“entertainer ” occurs in only one full quote.
+
+• TF-IDF of a word w for a full quote q is just the product of the TF and IDF. So, for the word “entertainer” in the Marlon Brando quote of part (d):
+
+• The TF is 0.5 (it occurs once, while the most frequent word in that quote is “at”, which occurs twice, so the TF ratio is 0.5)
+
+• The IDF is log(886/1), since there are 886 documents and the word “entertainer ” occurs in only one full quote.
 Write a function to compute the TF-IDF of any word in any full quote, using the postings and reverse-postings. Hint: Do import math and use math.log() to get logarithms.
 
 (f) Quote search using a single word (5 points). Write a function that takes a word as argument, and returns a dictionary whose keys are full quotes containing that word, and whose values are the TF-IDF score of that word for that full quote.
