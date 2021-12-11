@@ -23,12 +23,18 @@ Gotchas.
 ## 2. Voters in Florida (20 points)
 
 The file FloridaVoters.html contains a Web Table of republican and demo- cratic voters in various counties in Florida. Write code that reads in this file as a standard text file and prints out the counties, along with the number of republican and democratic voters in those counties, sorted by the number of democratic voters. The output should look like this:
+
 LAFAYETTE 1373 2672
+
 GLADES 2190 3110
+
 LIBERTY 720 3372
+
 ...
 MIAMI-DADE 362161 539367
+
 BROWARD 249762 566185
+
 Total 4377713 4637026
 
 Note that the numbers in the HTML file contain commas, but we got rid of them in order to do the sorting. Also, while we should technically ignore the data for Total, let’s not worry about it here.
@@ -39,16 +45,16 @@ Hint: You may want to read in the file and create a list of tuples of the form [
 ## 3. Near-duplicate detection (20 points)
 
 Tweets on a subject are often nearly (but not exactly) duplicates of each other. The file Santa.txt contains a few tweets about Santa Claus, one tweet per line. We will try to detect tweets that we have already seen before.
+
 (a) Convert each tweet into a dictionary of phrases (6 points).
-Write a function called moving window that takes as input a tweet (that is,
-a string), and converts it into a bunch of phrases. Each phrase is three con- secutive words in the tweet. For example, the tweet ‘‘This is an awesome tweet, dude’’consistsofthephrases‘‘ This is an’’,‘‘is an awesome’’, ‘‘an awesome tweet,’’, and ‘‘awesome tweet, dude’’. Return a dictio- nary whose keys are these phrases, and just set the corresponding values to
-1. This dictionary contains all the unique 3-word phrases in the tweet.
-(b) Calculate similarity between two tweets (6 points). To check if
-one tweet is a near-duplicate of another, we compute their cosine similarity:
-matches cosine(tweet1, tweet2) = √n ∗ n ,12
-where matches is the number of 3-word phrases in common between the two tweets, and n1 and n2 are the number of phrases in the two tweets respectively.
+Write a function called moving window that takes as input a tweet (that is, a string), and converts it into a bunch of phrases. Each phrase is three con- secutive words in the tweet. For example, the tweet ‘‘This is an awesome tweet, dude’’consistsofthephrases‘‘ This is an’’,‘‘is an awesome’’, ‘‘an awesome tweet,’’, and ‘‘awesome tweet, dude’’. Return a dictio- nary whose keys are these phrases, and just set the corresponding values to 1. This dictionary contains all the unique 3-word phrases in the tweet.
+
+(b) Calculate similarity between two tweets (6 points). To check if one tweet is a near-duplicate of another, we compute their cosine similarity:
+matches cosine(tweet1, tweet2) = √n ∗ n ,12 where matches is the number of 3-word phrases in common between the two tweets, and n1 and n2 are the number of phrases in the two tweets respectively.
+
 Write a function called cosine that takes as input two dictionaries. Each dictionary contains the 3-word phrases from one tweet. Return the cosine similarity between the phrases in the two dictionaries.
 Hint: You can use the function math.sqrt(x) to calculate the square-root of any floating point number x, but you must import the math module.
+
 (c) Read in tweets, and output near-duplicates (8 points). Read in the tweets in the file Santa.txt. For each tweet, figure out if it is a near- duplicate of any of the previously-seen tweets. We say that the two tweets are near-duplicates if their cosine similarity is greater than 0.5.
 You should call the functions moving window and cosine here. 
 
