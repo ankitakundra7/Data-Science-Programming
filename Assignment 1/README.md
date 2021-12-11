@@ -38,7 +38,9 @@ BROWARD 249762 566185
 Total 4377713 4637026
 
 Note that the numbers in the HTML file contain commas, but we got rid of them in order to do the sorting. Also, while we should technically ignore the data for Total, let’s not worry about it here.
+
 Please note: There are many libraries for automatically reading and pars- ing HTML. You should not use them. You must read in the HTML file as a plain text file, and figure out the correct regular expressions to extract the county names and the numbers of voters.
+
 Hint: You may want to read in the file and create a list of tuples of the form [(’ALACHUA’, 47329, 77996), (’BAKER’, 6963, 5813), ...] and then do the sorting and printing.
 
 
